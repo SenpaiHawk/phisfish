@@ -1,0 +1,264 @@
+<body onload="initialise()">
+
+      <div id="outside">
+	<div id="header">
+	  <h1>UNI•Login</h1>
+	</div>
+
+	<div class="floatleft">
+
+	  <div id="notBackDiv">
+
+	    <form class="disabledA" id="pwd" name="query" method="POST" action="https://login.emu.dk/" enctype="application/x-www-form-urlencoded">
+
+
+	      <p class="null">
+
+
+<input type="hidden" name="unilogintype" value="plain">
+<input type="hidden" name="one" value="sso.emu.dk">
+<input type="hidden" name="two" value="IGNORER">
+<input type="hidden" name="creds_from_greq" value="1">
+<input type="hidden" name="three" value="1">
+<input type="hidden" name="four" value="a5a">
+<input type="hidden" name="five" value="GET">
+<input type="hidden" name="six" value="sso.emu.dk">
+<input type="hidden" name="seven" value="L3VuaWxvZ2luL2xvZ2luLmNnaQ==">
+<input type="hidden" name="relay_url" value="https://sso.emu.dk/PubCookie.reply">
+<input type="hidden" name="eight" value="aWQ9c2tpbiZhdXRoPTAwMzYyOTViZWM3OTJjNGU1NDc5OTkyN2JjOGVkMjhmJnBhdGg9YUhSMGNEb3ZMMnAxWld4emJXbHVaR1V0YzJ0dmJHVXViUzV6YTI5c1pXbHVkSEpoTG1SckwwRmpZMjkxYm5RdlZXNXBURzluYVc0L2NtOXNaVDFUZEhWa1pXNTBKbkJoY25SdVpYSlRjRDExY200bE0wRnBkSE5zWldGeWJtbHVaeVV6UVc1emFTVXpRWE5oYld3bE0wRXlMakFsTTBGcGJuUnlZUzVxZFdWc2MyMXBibVJsTFhOcmIyeGxMbVJy">
+<input type="hidden" name="fr" value="NFR">
+<input type="hidden" name="hostname" value="sso.emu.dk">
+<input type="hidden" name="nine" value="1">
+<input type="hidden" name="file" value="">
+<input type="hidden" name="flag" value="0">
+<input type="hidden" name="referer" value="https://juelsminde-skole.m.skoleintra.dk/Account/IdpLogin?role=Student">
+<input type="hidden" name="post_stuff" value="">
+<input type="hidden" name="sess_re" value="0">
+<input type="hidden" name="pre_sess_tok" value="-88168165">
+<input type="hidden" name="first_kiss" value="1528890302-624494">
+<input type="hidden" name="pinit" value="0">
+<input type="hidden" name="reply" value="1">
+<input type="hidden" name="create_ts" value="224867189694">
+
+
+	      </p>
+	      <div>
+		<label class="disabledA">Brugernavn</label>
+		<input disableda="disabled" class="disabledA" type="text" autocomplete="on" name="user" id="user" value="">
+	      </div>
+
+	      <div>
+		<div id="loginDiv1">
+		  <label class="disabledA">Adgangskode</label>
+		</div>
+		<div id="pwshiftDiv1" style="display:none">
+		  <label class="disabledA">Nuværende adgangskode</label>
+		</div>
+
+		<input disableda="disabled" id="pass" class="disabledA" type="password" name="pass">
+
+		<div id="loginDiv2">
+		  <input disableda="disabled" id="login" class="knapperX disabledA" name="login" type="submit" value="Log ind">
+		</div>
+
+		<div id="pwshiftDiv2" style="display:none">
+		  <div>
+		    <label>Ny adgangskode (6-12 tegn)</label>
+		    <input id="nypass1" type="password" name="nypass1" onkeyup="checkPass();" onfocus="checkPass();">
+		  </div>
+
+		  <div>
+		    <label>Gentag ny adgangskode</label>
+		    <input id="nypass2" type="password" name="nypass2" onkeyup="checkPass();" onfocus="checkPass();">
+		  </div>
+
+		  <input class="knapperX" type="button" value="Fortryd" accesskey="f" onclick="setLogin();">
+
+		  <div class="tipContainer">
+		    <input class="knapperX disabled" id="setpass" name="setpass" type="submit" value="Skift" disabled="">
+		    <span class="tip" id="skiftTip">
+		      <b class="border-pil pil"></b>
+		      <b class="pil"></b>
+		      <span class="tipHead" id="skiftH2">
+		      </span>
+		      <span class="tipBody" id="skiftBody">
+			<span></span>
+		      </span>
+		    </span>
+
+		  </div>
+
+		</div> <!-- pwshiftDiv2 slut -->
+
+
+
+	    <form method="POST" id="aktiver" action="aktiver-pre/forklar.cgi" enctype="application/x-www-form-urlencoded">
+
+
+<input type="hidden" name="unilogintype" value="plain">
+<input type="hidden" name="one" value="sso.emu.dk">
+<input type="hidden" name="two" value="IGNORER">
+<input type="hidden" name="creds_from_greq" value="1">
+<input type="hidden" name="three" value="1">
+<input type="hidden" name="four" value="a5a">
+<input type="hidden" name="five" value="GET">
+<input type="hidden" name="six" value="sso.emu.dk">
+<input type="hidden" name="seven" value="L3VuaWxvZ2luL2xvZ2luLmNnaQ==">
+<input type="hidden" name="relay_url" value="https://sso.emu.dk/PubCookie.reply">
+<input type="hidden" name="eight" value="aWQ9c2tpbiZhdXRoPTAwMzYyOTViZWM3OTJjNGU1NDc5OTkyN2JjOGVkMjhmJnBhdGg9YUhSMGNEb3ZMMnAxWld4emJXbHVaR1V0YzJ0dmJHVXViUzV6YTI5c1pXbHVkSEpoTG1SckwwRmpZMjkxYm5RdlZXNXBURzluYVc0L2NtOXNaVDFUZEhWa1pXNTBKbkJoY25SdVpYSlRjRDExY200bE0wRnBkSE5zWldGeWJtbHVaeVV6UVc1emFTVXpRWE5oYld3bE0wRXlMakFsTTBGcGJuUnlZUzVxZFdWc2MyMXBibVJsTFhOcmIyeGxMbVJy">
+<input type="hidden" name="fr" value="NFR">
+<input type="hidden" name="hostname" value="sso.emu.dk">
+<input type="hidden" name="nine" value="1">
+<input type="hidden" name="file" value="">
+<input type="hidden" name="flag" value="0">
+<input type="hidden" name="referer" value="https://juelsminde-skole.m.skoleintra.dk/Account/IdpLogin?role=Student">
+<input type="hidden" name="post_stuff" value="">
+<input type="hidden" name="sess_re" value="0">
+<input type="hidden" name="pre_sess_tok" value="-88168165">
+<input type="hidden" name="first_kiss" value="1528890302-624494">
+<input type="hidden" name="pinit" value="0">
+<input type="hidden" name="reply" value="1">
+<input type="hidden" name="create_ts" value="224867189694">
+
+	      <input type="submit" id="submit-aktiver-a" name="forklaring" value="aktiver" style="display:none">
+	      <input type="submit" id="submit-aktiver-g" name="forklaring" value="glemt" style="display:none">
+
+	    </form>
+
+
+	    <div id="loginDiv3">
+
+	      <!-- Signatur login -->
+
+	      <span class="stackx disabledC disabledD disabledA" id="ellerLog">
+		Eller log ind med:
+	      </span>
+
+	      <div class="disabledA red" id="omvendt1">
+		Denne side kræver adgang med
+	      </div>
+
+	      <form id="digsigX" name="queryOces2" action="https://oces.emu.dk/uniclogongw/" method="POST" enctype="application/x-www-form-urlencoded">
+
+
+		<p class="null">
+
+
+<input type="hidden" name="unilogintype" value="plain">
+<input type="hidden" name="one" value="sso.emu.dk">
+<input type="hidden" name="two" value="IGNORER">
+<input type="hidden" name="creds_from_greq" value="1">
+<input type="hidden" name="three" value="1">
+<input type="hidden" name="four" value="a5a">
+<input type="hidden" name="five" value="GET">
+<input type="hidden" name="six" value="sso.emu.dk">
+<input type="hidden" name="seven" value="L3VuaWxvZ2luL2xvZ2luLmNnaQ==">
+<input type="hidden" name="relay_url" value="https://sso.emu.dk/PubCookie.reply">
+<input type="hidden" name="eight" value="aWQ9c2tpbiZhdXRoPTAwMzYyOTViZWM3OTJjNGU1NDc5OTkyN2JjOGVkMjhmJnBhdGg9YUhSMGNEb3ZMMnAxWld4emJXbHVaR1V0YzJ0dmJHVXViUzV6YTI5c1pXbHVkSEpoTG1SckwwRmpZMjkxYm5RdlZXNXBURzluYVc0L2NtOXNaVDFUZEhWa1pXNTBKbkJoY25SdVpYSlRjRDExY200bE0wRnBkSE5zWldGeWJtbHVaeVV6UVc1emFTVXpRWE5oYld3bE0wRXlMakFsTTBGcGJuUnlZUzVxZFdWc2MyMXBibVJsTFhOcmIyeGxMbVJy">
+<input type="hidden" name="fr" value="NFR">
+<input type="hidden" name="hostname" value="sso.emu.dk">
+<input type="hidden" name="nine" value="1">
+<input type="hidden" name="file" value="">
+<input type="hidden" name="flag" value="0">
+<input type="hidden" name="referer" value="https://juelsminde-skole.m.skoleintra.dk/Account/IdpLogin?role=Student">
+<input type="hidden" name="post_stuff" value="">
+<input type="hidden" name="sess_re" value="0">
+<input type="hidden" name="pre_sess_tok" value="-88168165">
+<input type="hidden" name="first_kiss" value="1528890302-624494">
+<input type="hidden" name="pinit" value="0">
+<input type="hidden" name="reply" value="1">
+<input type="hidden" name="create_ts" value="224867189694">
+
+
+		  <input type="hidden" name="UNICLOGON_URL" value="https://login.emu.dk/">
+		  <input type="hidden" name="RESPONSE_URL" value="https://login.emu.dk/">
+		</p>
+
+	      </form>
+
+	      <div class="disabledA" id="omvendt2">
+
+		<span class="disabledC asLink stack" id="nemIdA">
+		  <img src="images/logoNemID.png" alt="NemID" id="nemidIcon" class="digsigx disabledC" onclick="setPref('NemID'); return document.getElementById('digsigX').submit();">
+		</span>
+
+	      </div> <!-- class="disabledA" id="omvendt" -->
+
+	    </div> <!-- loginDiv3 slut -->
+
+	  </div></form> <!-- notBackDiv slut -->
+	  <div id="backDiv" style="display:none">
+	    <p>Tilbage til</p>
+	    <a href="" id="backA"></a>
+	  </div>
+
+	</div>
+	</div>
+
+	<div class="floatright">
+
+	  <div id="loginDiv4">
+	    <div id="reason">
+
+
+
+
+
+	    </div>
+	    <div id="husk">
+	      <h2 class="luft">Husk!</h2>
+	      For at logge ud, skal du lukke browseren.
+	    </div>
+	  </div> <!-- loginDiv4 slut -->
+
+	  <div id="pwshiftDiv3" style="display:none">
+
+	    <h2 class="luft">Skift adgangskode</h2>
+
+	    Anbefaling:
+	    <ul>
+	      <li>Minimum 8 tegn</li>
+	      <li>Både store og små bogstaver</li>
+	      <li>Et eller flere tal</li>
+	      <li>Evt. specialtegn som &amp;, !, ? eller :-)</li>
+	    </ul>
+
+	  </div> <!-- pwshiftDiv3 slut -->
+
+	  <div id="loginDiv5" class="disabledA">
+
+	    <p>
+	      <a href="javascript:setPwshift('','',0);" accesskey="k" onclick="">Skift adgangskode</a>
+	    </p>
+	  </div>
+
+	<div id="loginDiv6">
+	  <label class="asLink" for="submit-aktiver-a">
+	   Glemt brugernavn eller adgangskode?</label>
+	</div>
+
+	<div id="pwshiftDiv4" style="display: none;">
+	  <a target="_blank" href="http://stil.dk/Arbejdsomraader/Administration-og-infrastruktur/UNI-Login/For-laerere-og-elever">
+	    Support
+	  </a>
+	</div>
+
+	</div>
+
+	<div id="footer" onclick="if (event.ctrlKey &amp;&amp; event.altKey){alert('ssoting7.uif.uni-c.dk/3.3.3 login')}">
+	  <img id="minilogo" src="images/logo-ul-lille.png" alt="Styrelsen for It og Læring">
+	  <img id="maxilogo" src="images/logo-ul-stor.png" alt="Styrelsen for It og Laelig;ring">
+	</div>
+
+	<!-- THIS_IS:ssoting7.uif.uni-c.dk 3.3.3 -->
+
+      </div>
+
+
+
+
+<!-- Local Variables: -->
+<!-- mode: HTML -->
+<!-- End: -->
+
+</body>
